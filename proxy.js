@@ -5,7 +5,7 @@ const fetch = require('node-fetch'); // Installed via npm
 
 // Create a proxy server
 const proxy = httpProxy.createProxyServer({
-    target: 'https://southafrica.blsspainglobal.com',
+    target: 'https://mauritania.blsspainglobal.com',
     secure: false, // Disable TLS certificate validation
     changeOrigin: true, // Change the origin of the host header to the target URL
     agent: new https.Agent({
@@ -15,7 +15,7 @@ const proxy = httpProxy.createProxyServer({
 
 // Proxy server to capture cookies
 const proxyServer = http.createServer((req, res) => {
-    console.log(`Proxying request to: https://southafrica.blsspainglobal.com${req.url}`);
+    console.log(`Proxying request to: https://mauritania.blsspainglobal.com${req.url}`);
 
     // Intercept the response to capture cookies
     proxy.on('proxyRes', (proxyRes, req, res) => {
